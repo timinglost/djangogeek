@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainapp',
     'authapp',
+    'basketapp',
 ]
 
 AUTH_USER_MODEL = 'authapp.ShopUser'
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'geekshop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['geekshop/tamplates', 'mainapp/tamplates', 'authapp/tamplates'],
+        'DIRS': ['geekshop/tamplates', 'mainapp/tamplates', 'authapp/tamplates', 'basketapp/tamplates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
