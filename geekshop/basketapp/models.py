@@ -10,9 +10,17 @@ class Basket(models.Model):
         on_delete=models.CASCADE,
         related_name='basket',
     )
-    product = models.ForeignKey(Product, on_delete=models.CASCADE,)
-    quantity = models.PositiveIntegerField(verbose_name='количество', default=0,)
+    product = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+    )
+    quantity = models.PositiveIntegerField(
+        verbose_name='количество',
+        default=0,
+    )
     add_datetime = models.DateTimeField(verbose_name='время', auto_now_add=True)
+
+    is_active = models.BooleanField(verbose_name='активна', default=True)
 
     @property
     def product_cost(self):

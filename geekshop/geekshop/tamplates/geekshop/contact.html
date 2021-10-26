@@ -3,16 +3,7 @@
 
 {% block content %}
 		<div class="hero">
-			<div class="header clearfix">
-				<a href="/" class="logo"></a>
-				<ul class="menu">
-					<li><a href="{% url 'main' %}">домой</a></li>
-					<li><a href="{% url 'products:main' %}">продукты</a></li>
-					<li><a href="{% url 'contacts' %}" class="active">контакты</a></li>
-				</ul>
-				<a href="#" class="search"></a>
-                <a href="#" class="basket"></a>
-			</div>
+            {% include 'geekshop/includes/inc_main_menu.html' %}
 			<h1>наши контакты</h1>
 		</div>
 
@@ -66,5 +57,4 @@
 				</div>
 			</div>
 		</div>
-
 {% endblock %}
