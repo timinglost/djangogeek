@@ -29,7 +29,7 @@ class ProductsCategory(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey(
-        ProductCategory,
+        ProductsCategory,
         on_delete=models.CASCADE
     )
 
