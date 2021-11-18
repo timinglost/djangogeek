@@ -2,3 +2,4 @@ main.py
 /venv/
 *.pyc
 /.idea/
+geekshop/.env
