@@ -55,7 +55,7 @@ class UserDeleteView(DeleteView):
 def categories(request):
     title = 'админка/категории'
 
-    categories_list = ProductCategory.objects.all()
+    categories_list = ProductsCategory.objects.all()
 
     content = {
         'title': title,
@@ -80,7 +80,7 @@ def category_delete(request, pk):
 def products(request, pk):
     title = 'админка/продукт'
 
-    category = get_object_or_404(ProductCategory, pk=pk)
+    category = get_object_or_404(ProductsCategory, pk=pk)
     products_list = Product.objects.filter(category__pk=pk).order_by('name')
 
     content = {
@@ -94,7 +94,7 @@ def products(request, pk):
 
 def product_create(request, pk):
     title = 'товары/создание'
-    category = get_object_or_404(ProductCategory, pk=pk)
+    category = get_object_or_404(ProductsCategory, pk=pk)
 
     if request.method == 'POST':
         product_form = ProductEditForm(request.POST, request.FILES)
